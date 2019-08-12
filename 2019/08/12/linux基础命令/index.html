@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html class="theme-next muse use-motion" lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="generator" content="Hexo 3.9.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.3.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.3.0" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.3.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '7.3.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    save_scroll: false,
+    copycode: {"enable":false,"show_result":false,"style":null},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: 'Copy',
+      copy_success: 'Copied',
+      copy_failure: 'Copy failed'
+    }
+  };
+</script>
+
+  <meta name="description" content="一.常用命令行集合pwd ：显示当前所在目录ls : 显示当前目录下文件cd : 切换路径    cd.. ：返回到上一级路径mkdir : 新建目录touch : 新建文件cp : 复制文件cat : 将文本内容打印到终端rmdir : 删除目录rm : 删除文件clear : 清除当前屏幕内容 二.程序执行的过程1.在键盘按下P 发送给某个程序（shell程序）2.程序上显示P3.出入W，显示">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux基础命令">
+<meta property="og:url" content="http://yoursite.com/2019/08/12/linux基础命令/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="一.常用命令行集合pwd ：显示当前所在目录ls : 显示当前目录下文件cd : 切换路径    cd.. ：返回到上一级路径mkdir : 新建目录touch : 新建文件cp : 复制文件cat : 将文本内容打印到终端rmdir : 删除目录rm : 删除文件clear : 清除当前屏幕内容 二.程序执行的过程1.在键盘按下P 发送给某个程序（shell程序）2.程序上显示P3.出入W，显示">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-08-12T02:33:07.172Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="linux基础命令">
+<meta name="twitter:description" content="一.常用命令行集合pwd ：显示当前所在目录ls : 显示当前目录下文件cd : 切换路径    cd.. ：返回到上一级路径mkdir : 新建目录touch : 新建文件cp : 复制文件cat : 将文本内容打印到终端rmdir : 删除目录rm : 删除文件clear : 清除当前屏幕内容 二.程序执行的过程1.在键盘按下P 发送给某个程序（shell程序）2.程序上显示P3.出入W，显示">
+  <link rel="canonical" href="http://yoursite.com/2019/08/12/linux基础命令/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>linux基础命令 | Hexo</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  <div class="container sidebar-position-left">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+  </ul>
+
+    
+
+</nav>
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content page-post-detail">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/12/linux基础命令/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">linux基础命令
+
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2019-08-12 09:55:46 / Modified: 10:33:07" itemprop="dateCreated datePublished" datetime="2019-08-12T09:55:46+08:00">2019-08-12</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>一.常用命令行集合<br>pwd ：显示当前所在目录<br>ls : 显示当前目录下文件<br>cd : 切换路径<br>    cd.. ：返回到上一级路径<br>mkdir : 新建目录<br>touch : 新建文件<br>cp : 复制文件<br>cat : 将文本内容打印到终端<br>rmdir : 删除目录<br>rm : 删除文件<br>clear : 清除当前屏幕内容</p>
+<p>二.程序执行的过程<br>1.在键盘按下P 发送给某个程序（shell程序）<br>2.程序上显示P<br>3.出入W，显示W；输入d，显示d.<br>4.回车（根据字符串去由环境变量决定的默认目录下找命令echo $PATH，找到后执行命令）<br>5.程序执行出结果</p>
+<p>可添加环境命令 PATH=$PATH:/my/dir</p>
+<p>可用相对路径执行命令 ./test1</p>
+<p>三.command not found原因<br>1.PATH所确定的目录中无此程序<br>2.查找到的不是一个可执行命令(普通文件可以运行,但是无结果)</p>
+<p>四.命令提示符的意思<a href="mailto:book@www.100ask.org" target="_blank" rel="noopener">book@www.100ask.org</a>:<del>$<br>book:当前登录的用户名<br><a href="http://www.100ask.org:主机名" target="_blank" rel="noopener">www.100ask.org:主机名</a><br>~：当前所在目录，</del>表示家目录<br>$:用户提示符，root用户显示#,普通用户显示$.</p>
+<p>六.linux命令的格式<br>命令 【选项】 【参数】<br>举例 ls<br>ls -l<br>ls -l /home<br>ls命令有选项-l，其他可以通过ls –help或者man ls(q)查看<br>命令部分一定存在,选项和参数不一定存在,选项和参数取决于你使用命令的具体目的<br>命令，选项，参数之间是以空格隔开的,一个或多个空格都视为一个空格<br>完成linux命令输入后，按下enter执行命令</p>
+<p>七.详细命令的解释</p>
+<hr>
+<p>1.pwd(print working directory)<br>功能 :打印当前所在路径<br>命令    选项    参数<br>pwd    \    \</p>
+<hr>
+<p>2.cd(change directory)<br>功能 : 改变路径<br>命令    选项    参数<br>cd    \    [目录]</p>
+<p>cd ~ ：切换到家目录<br>cd . : 切换到当前路径<br>cd .. : 切换到上一路径<br>cd ../.. : 切换到上上一路径<br>cd - : 切换到上一次路径<br>cd ../路径 : 切换到相对路径</p>
+<p>注意事项:<br>切换的路径必须保证存在，可以使用ls命令查看某一路径<br>多使用tab补全，相对路径只到子路径</p>
+<hr>
+<p>3.ls(list)<br>功能 ：列出目录内容<br>命令    选项    参数<br>ls    -l -a -h    [目录]<br>-i(long) ：显示文件更详细信息（权限，最后修改时间，大小）<br>-a(all) ：显示了隐藏文件<br>-h(human) : 将文件大小以K，M，G表示</p>
+<p>drwxr-xr-x           1       peng       peng                 512         Jun 11 23:20          peng<br>文件属性     链接数 文件所有者  文件所属组名    文件大小    文件最后修改日期   文件名</p>
+<p>ls /home ：显示home下目录<br>ls ~ : 显示/home/peng下目录</p>
+<hr>
+<p>4.mkdir(make directory)<br>功能 ：创建目录<br>命令    选项    参数<br>ls    -p    [目录]</p>
+<p>mkdir -p 父目录/子目录<br>-p(parents)<br>连续创建多级目录（父目录和子目录），如果父目录不存在，则需要加入 -p 参数</p>
+<hr>
+<p>5.rmdir(remove dir)<br>功能 ：删除目录</p>
+<p>注意：无法删除含有子目录和文件的非空目录</p>
+<hr>
+<p>6.touch<br>功能 ：新建文件</p>
+<p>注意：<br>同一目录无法创建同名文件<br>linux文件区分大小写</p>
+<p>mv : 修改文件（目录）名或者移动路径<br>    mv 旧文件名 新文件名 ——》修改文件名<br>    mv 旧目录名 新目录名 ——》修改目录名<br>    mv 文件名    目录名    ——》修改路径</p>
+<hr>
+<p>7.cp(copy)<br>功能 ：复制文件</p>
+<p>cp 源文件名 目标文件名</p>
+<p>cp 源文件名 目标目录名</p>
+<p>cp 源目录名 目标目录名<br>cp -r test2 test3 其中-r参数是递归复制</p>
+<p>cp -i test3.txt test3如果 test3文件目录下有同名的test3.txt,-i会使linux确认是否覆盖文件</p>
+<p>cp 有 -r -i -f -d,在学习权限后加深</p>
+<hr>
+<p>8.rm(remove)<br>功能 ：删除文件和目录</p>
+<p>-i(interactive交互) ：确认是否删除<br>-r(recursive递归) ：递归删除指定目录下的子目录和文件<br>-f(force强制) ：强制删除</p>
+<hr>
+<p>9.cat<br>功能 ：查看文件内容</p>
+<p>cat test2.txt test3.txt ：将test2.txt和test3.txt打印到标准输出</p>
+<p> cat -n test2.txt : 将test2.txt内容和行号都打印出来</p>
+<hr>
+<p>10.clear<br>功能 ：刷新屏幕，但保留了历史命令记录<br>说明 ：只是让terminal向后翻一页</p>
+<p>reset ：刷新屏幕并删除了历史命令记录</p>
+<hr>
+<p>11.man    info    –help</p>
+<p>man man : 查看man用户手册<br>man ls : 当没有指定某一页时，默认使用第一页<br>man 2 ls : 查看ls第二页用户手册</p>
+<p>info和help没有man齐全</p>
+
+    </div>
+
+    
+    
+    
+        
+      
+
+      <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2019/08/12/hello-world/" rel="next" title="Hello World">
+                  <i class="fa fa-chevron-left"></i> Hello World
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">John Doe</p>
+  <div class="site-description motion-element" itemprop="description"></div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+    
+  </nav>
+
+
+
+        </div>
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.3.0</div>
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+      </div>
+
+    
+
+  </div>
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+<script src="/js/utils.js?v=7.3.0"></script>
+  <script src="/js/motion.js?v=7.3.0"></script>
+
+
+  <script src="/js/schemes/muse.js?v=7.3.0"></script>
+
+
+<script src="/js/next-boot.js?v=7.3.0"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+
+  
+  <script src="/js/scrollspy.js?v=7.3.0"></script>
+<script src="/js/post-details.js?v=7.3.0"></script>
+
+
+</body>
+</html>
