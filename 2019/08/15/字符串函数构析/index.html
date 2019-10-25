@@ -55,28 +55,32 @@
   };
 </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="字符串函数构析今日参加了一场笔试，刚好程序题问到一道strcpy函数构建，刚好之前看过字符串函数，同时网上文章大部分都是介绍了下函数的用法，缺少了函数的实现，今日就来自己构析下常见的字符串函数，字符串函数位于标准库的头文件string.h中，在使用函数时需引用该文件 strlen 函数原型：size_t strlen(const char *s) 函数功能：返回s的字符串函数(不包含结尾的0) 函">
+<meta property="og:type" content="article">
+<meta property="og:title" content="字符串函数构析">
+<meta property="og:url" content="http://yoursite.com/2019/08/15/字符串函数构析/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="字符串函数构析今日参加了一场笔试，刚好程序题问到一道strcpy函数构建，刚好之前看过字符串函数，同时网上文章大部分都是介绍了下函数的用法，缺少了函数的实现，今日就来自己构析下常见的字符串函数，字符串函数位于标准库的头文件string.h中，在使用函数时需引用该文件 strlen 函数原型：size_t strlen(const char *s) 函数功能：返回s的字符串函数(不包含结尾的0) 函">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-10-25T02:08:41.922Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-  <link rel="canonical" href="http://yoursite.com/">
+<meta name="twitter:title" content="字符串函数构析">
+<meta name="twitter:description" content="字符串函数构析今日参加了一场笔试，刚好程序题问到一道strcpy函数构建，刚好之前看过字符串函数，同时网上文章大部分都是介绍了下函数的用法，缺少了函数的实现，今日就来自己构析下常见的字符串函数，字符串函数位于标准库的头文件string.h中，在使用函数时需引用该文件 strlen 函数原型：size_t strlen(const char *s) 函数功能：返回s的字符串函数(不包含结尾的0) 函">
+  <link rel="canonical" href="http://yoursite.com/2019/08/15/字符串函数构析/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome: true,
-    isPost: false,
+    isHome: false,
+    isPost: true,
     isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>Hexo</title>
+  <title>字符串函数构析 | Hexo</title>
   
 
 
@@ -180,10 +184,11 @@
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
-          <div id="content" class="content page-home">
+          <div id="content" class="content page-post-detail">
             
-  <section id="posts" class="posts-expand">
-      
+
+  <div id="posts" class="posts-expand">
+    
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
@@ -204,9 +209,8 @@
       <header class="post-header">
 
         
-          <h1 class="post-title" itemprop="name headline">
-              
-              <a href="/2019/08/15/字符串函数构析/" class="post-title-link" itemprop="url">字符串函数构析</a>
+          <h1 class="post-title" itemprop="name headline">字符串函数构析
+
             
           </h1>
         
@@ -249,8 +253,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          
-            <h1 id="字符串函数构析"><a href="#字符串函数构析" class="headerlink" title="字符串函数构析"></a>字符串函数构析</h1><p>今日参加了一场笔试，刚好程序题问到一道strcpy函数构建，刚好之前看过字符串函数，同时网上文章大部分都是介绍了下函数的用法，缺少了函数的实现，今日就来自己构析下常见的字符串函数，字符串函数位于标准库的头文件string.h中，在使用函数时需引用该文件</p>
+        <h1 id="字符串函数构析"><a href="#字符串函数构析" class="headerlink" title="字符串函数构析"></a>字符串函数构析</h1><p>今日参加了一场笔试，刚好程序题问到一道strcpy函数构建，刚好之前看过字符串函数，同时网上文章大部分都是介绍了下函数的用法，缺少了函数的实现，今日就来自己构析下常见的字符串函数，字符串函数位于标准库的头文件string.h中，在使用函数时需引用该文件</p>
 <h3 id="strlen"><a href="#strlen" class="headerlink" title="strlen"></a><strong><em>strlen</em></strong></h3><ul>
 <li><h5 id="函数原型：size-t-strlen-const-char-s"><a href="#函数原型：size-t-strlen-const-char-s" class="headerlink" title="函数原型：size_t strlen(const char *s)"></a><strong>函数原型</strong>：size_t strlen(const char *s)</h5></li>
 <li><h5 id="函数功能：返回s的字符串函数-不包含结尾的0"><a href="#函数功能：返回s的字符串函数-不包含结尾的0" class="headerlink" title="函数功能：返回s的字符串函数(不包含结尾的0)"></a><strong>函数功能</strong>：返回s的字符串函数(不包含结尾的0)</h5></li>
@@ -299,244 +302,43 @@
 </ul>
 <hr>
 
-          
-        
-      
     </div>
 
     
     
     
+        
+      
+
       <footer class="post-footer">
-          <div class="post-eof"></div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2019/08/12/linux基础命令/" rel="next" title="linux基础命令">
+                  <i class="fa fa-chevron-left"></i> linux基础命令
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+            </div>
+          </div>
         
       </footer>
+    
   </div>
   
   
   
   </article>
 
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/12/linux基础命令/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-              
-              <a href="/2019/08/12/linux基础命令/" class="post-title-link" itemprop="url">linux基础命令</a>
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
-                
-              
-
-              <time title="Created: 2019-08-12 09:55:46 / Modified: 10:33:07" itemprop="dateCreated datePublished" datetime="2019-08-12T09:55:46+08:00">2019-08-12</time>
-            </span>
-          
-            
-
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-            <p>一.常用命令行集合<br>pwd ：显示当前所在目录<br>ls : 显示当前目录下文件<br>cd : 切换路径<br>    cd.. ：返回到上一级路径<br>mkdir : 新建目录<br>touch : 新建文件<br>cp : 复制文件<br>cat : 将文本内容打印到终端<br>rmdir : 删除目录<br>rm : 删除文件<br>clear : 清除当前屏幕内容</p>
-<p>二.程序执行的过程<br>1.在键盘按下P 发送给某个程序（shell程序）<br>2.程序上显示P<br>3.出入W，显示W；输入d，显示d.<br>4.回车（根据字符串去由环境变量决定的默认目录下找命令echo $PATH，找到后执行命令）<br>5.程序执行出结果</p>
-<p>可添加环境命令 PATH=$PATH:/my/dir</p>
-<p>可用相对路径执行命令 ./test1</p>
-<p>三.command not found原因<br>1.PATH所确定的目录中无此程序<br>2.查找到的不是一个可执行命令(普通文件可以运行,但是无结果)</p>
-<p>四.命令提示符的意思<a href="mailto:book@www.100ask.org" target="_blank" rel="noopener">book@www.100ask.org</a>:<del>$<br>book:当前登录的用户名<br><a href="http://www.100ask.org:主机名" target="_blank" rel="noopener">www.100ask.org:主机名</a><br>~：当前所在目录，</del>表示家目录<br>$:用户提示符，root用户显示#,普通用户显示$.</p>
-<p>六.linux命令的格式<br>命令 【选项】 【参数】<br>举例 ls<br>ls -l<br>ls -l /home<br>ls命令有选项-l，其他可以通过ls –help或者man ls(q)查看<br>命令部分一定存在,选项和参数不一定存在,选项和参数取决于你使用命令的具体目的<br>命令，选项，参数之间是以空格隔开的,一个或多个空格都视为一个空格<br>完成linux命令输入后，按下enter执行命令</p>
-<p>七.详细命令的解释</p>
-<hr>
-<p>1.pwd(print working directory)<br>功能 :打印当前所在路径<br>命令    选项    参数<br>pwd    \    \</p>
-<hr>
-<p>2.cd(change directory)<br>功能 : 改变路径<br>命令    选项    参数<br>cd    \    [目录]</p>
-<p>cd ~ ：切换到家目录<br>cd . : 切换到当前路径<br>cd .. : 切换到上一路径<br>cd ../.. : 切换到上上一路径<br>cd - : 切换到上一次路径<br>cd ../路径 : 切换到相对路径</p>
-<p>注意事项:<br>切换的路径必须保证存在，可以使用ls命令查看某一路径<br>多使用tab补全，相对路径只到子路径</p>
-<hr>
-<p>3.ls(list)<br>功能 ：列出目录内容<br>命令    选项    参数<br>ls    -l -a -h    [目录]<br>-i(long) ：显示文件更详细信息（权限，最后修改时间，大小）<br>-a(all) ：显示了隐藏文件<br>-h(human) : 将文件大小以K，M，G表示</p>
-<p>drwxr-xr-x           1       peng       peng                 512         Jun 11 23:20          peng<br>文件属性     链接数 文件所有者  文件所属组名    文件大小    文件最后修改日期   文件名</p>
-<p>ls /home ：显示home下目录<br>ls ~ : 显示/home/peng下目录</p>
-<hr>
-<p>4.mkdir(make directory)<br>功能 ：创建目录<br>命令    选项    参数<br>ls    -p    [目录]</p>
-<p>mkdir -p 父目录/子目录<br>-p(parents)<br>连续创建多级目录（父目录和子目录），如果父目录不存在，则需要加入 -p 参数</p>
-<hr>
-<p>5.rmdir(remove dir)<br>功能 ：删除目录</p>
-<p>注意：无法删除含有子目录和文件的非空目录</p>
-<hr>
-<p>6.touch<br>功能 ：新建文件</p>
-<p>注意：<br>同一目录无法创建同名文件<br>linux文件区分大小写</p>
-<p>mv : 修改文件（目录）名或者移动路径<br>    mv 旧文件名 新文件名 ——》修改文件名<br>    mv 旧目录名 新目录名 ——》修改目录名<br>    mv 文件名    目录名    ——》修改路径</p>
-<hr>
-<p>7.cp(copy)<br>功能 ：复制文件</p>
-<p>cp 源文件名 目标文件名</p>
-<p>cp 源文件名 目标目录名</p>
-<p>cp 源目录名 目标目录名<br>cp -r test2 test3 其中-r参数是递归复制</p>
-<p>cp -i test3.txt test3如果 test3文件目录下有同名的test3.txt,-i会使linux确认是否覆盖文件</p>
-<p>cp 有 -r -i -f -d,在学习权限后加深</p>
-<hr>
-<p>8.rm(remove)<br>功能 ：删除文件和目录</p>
-<p>-i(interactive交互) ：确认是否删除<br>-r(recursive递归) ：递归删除指定目录下的子目录和文件<br>-f(force强制) ：强制删除</p>
-<hr>
-<p>9.cat<br>功能 ：查看文件内容</p>
-<p>cat test2.txt test3.txt ：将test2.txt和test3.txt打印到标准输出</p>
-<p> cat -n test2.txt : 将test2.txt内容和行号都打印出来</p>
-<hr>
-<p>10.clear<br>功能 ：刷新屏幕，但保留了历史命令记录<br>说明 ：只是让terminal向后翻一页</p>
-<p>reset ：刷新屏幕并删除了历史命令记录</p>
-<hr>
-<p>11.man    info    –help</p>
-<p>man man : 查看man用户手册<br>man ls : 当没有指定某一页时，默认使用第一页<br>man 2 ls : 查看ls第二页用户手册</p>
-<p>info和help没有man齐全</p>
-
-          
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
   </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/12/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-              
-              <a href="/2019/08/12/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
-                
-              
-
-              <time title="Created: 2019-08-12 09:15:15" itemprop="dateCreated datePublished" datetime="2019-08-12T09:15:15+08:00">2019-08-12</time>
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-  </section>
-
-  
 
 
           </div>
@@ -555,8 +357,17 @@
 
   <aside id="sidebar" class="sidebar">
     <div class="sidebar-inner">
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
 
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -592,6 +403,23 @@
 
         </div>
       </div>
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#字符串函数构析"><span class="nav-number">1.</span> <span class="nav-text">字符串函数构析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#strlen"><span class="nav-number">1.0.1.</span> <span class="nav-text">strlen</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#函数原型：size-t-strlen-const-char-s"><span class="nav-number">1.0.1.0.1.</span> <span class="nav-text">函数原型：size_t strlen(const char *s)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#函数功能：返回s的字符串函数-不包含结尾的0"><span class="nav-number">1.0.1.0.2.</span> <span class="nav-text">函数功能：返回s的字符串函数(不包含结尾的0)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#函数构析："><span class="nav-number">1.0.1.0.3.</span> <span class="nav-text">函数构析：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#strcmp"><span class="nav-number">1.0.2.</span> <span class="nav-text">strcmp</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#函数原型：int-mycmp-const-char-s1-const-char-s2"><span class="nav-number">1.0.2.0.1.</span> <span class="nav-text">函数原型：int mycmp(const char *s1,const char *s2)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#函数功能：比较两字符串，返回值为三种结果-以ascii码表对比"><span class="nav-number">1.0.2.0.2.</span> <span class="nav-text">函数功能：比较两字符串，返回值为三种结果(以ascii码表对比)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#函数构析：-1"><span class="nav-number">1.0.2.0.3.</span> <span class="nav-text">函数构析：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#strcpy"><span class="nav-number">1.0.3.</span> <span class="nav-text">strcpy</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#函数原型：char-strcpy-char-dst-const-char-src"><span class="nav-number">1.0.3.0.1.</span> <span class="nav-text">函数原型：char *strcpy(char *dst,const char * src)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#函数功能：返回s的字符串函数-不包含结尾的0-1"><span class="nav-number">1.0.3.0.2.</span> <span class="nav-text">函数功能：返回s的字符串函数(不包含结尾的0)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#函数构析：-2"><span class="nav-number">1.0.3.0.3.</span> <span class="nav-text">函数构析：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#strcat"><span class="nav-number">1.0.4.</span> <span class="nav-text">strcat</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#函数功能：返回s的字符串函数-不包含结尾的0-2"><span class="nav-number">1.0.4.0.1.</span> <span class="nav-text">函数功能：返回s的字符串函数(不包含结尾的0)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#函数构析：-3"><span class="nav-number">1.0.4.0.2.</span> <span class="nav-text">函数构析：</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
     </div>
   </aside>
@@ -687,5 +515,9 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.3.0"></script>
+<script src="/js/post-details.js?v=7.3.0"></script>
+
+
 </body>
 </html>
