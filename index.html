@@ -190,6 +190,102 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/26/Maximum-Subsquence-Sum/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/11/26/Maximum-Subsquence-Sum/" class="post-title-link" itemprop="url">Maximum Subsquence Sum</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2019-11-26 21:28:58 / Modified: 21:30:35" itemprop="dateCreated datePublished" datetime="2019-11-26T21:28:58+08:00">2019-11-26</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <h1 id="Maximum-Subsequence-Sum"><a href="#Maximum-Subsequence-Sum" class="headerlink" title="Maximum Subsequence Sum"></a>Maximum Subsequence Sum</h1><h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>给定K个整数组成的序列{ N1, N2, …, NK }，“连续子列”被定义为{ Ni, Ni+1, …, Nj }，其中 1≤i≤j≤K。“最大子列和”则被定义为所有连续子列元素的和中最大者。例如给定序列{ -2, 11, -4, 13, -5, -2 }，其连续子列{ 11, -4, 13 }有最大的和20。现要求你编写程序，计算给定整数序列的最大子列和。</p>
+<hr>
+<h3 id="算法解答"><a href="#算法解答" class="headerlink" title="算法解答"></a>算法解答</h3><p>算法一：多层遍历，时间复杂度O(n^3^)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">int MaxSubeqSum1(int a[],int n)</span><br><span class="line">&#123;</span><br><span class="line">	int thissum=0,maxsum=0;</span><br><span class="line">	for(int i=0;i&lt;n;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		for(int j=i;j&lt;n;j++)</span><br><span class="line">		&#123;</span><br><span class="line">			for(int k=i;k&lt;=j;k++)</span><br><span class="line">			&#123;</span><br><span class="line">				thissum+=a[k];</span><br><span class="line">			&#125;</span><br><span class="line">			if(thissum&gt;maxsum)</span><br><span class="line">				maxsum=thissum;</span><br><span class="line">			thissum=0;</span><br><span class="line">		&#125;	</span><br><span class="line">	&#125;</span><br><span class="line">	return maxsum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>算法二：去掉最内层循环，时间复杂度O(n^2^)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">int MaxSubeqSum2(int a[],int n)</span><br><span class="line">&#123;</span><br><span class="line">	int thissum=0,maxsum=0;</span><br><span class="line">	for(int i=0;i&lt;n;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		for(int j=i;j&lt;n;j++)</span><br><span class="line">		&#123;</span><br><span class="line">			thissum+=a[j];</span><br><span class="line">			if(thissum&gt;maxsum)</span><br><span class="line">				maxsum=thissum;</span><br><span class="line">		&#125;</span><br><span class="line">		thissum=0;</span><br><span class="line">	&#125;</span><br><span class="line">	return maxsum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>算法三：分而治之，时间复杂度O(nlogn),最大子序列和必在左子列，右子列和跨界子序列</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">int MaxSubeqSum3(int a[],int left,int right)</span><br><span class="line">&#123;</span><br><span class="line">	if(left==right)</span><br><span class="line">	&#123;</span><br><span class="line">		return a[left];</span><br><span class="line">	&#125;//递归基</span><br><span class="line"></span><br><span class="line">	int middle = (left+right)/2;</span><br><span class="line">	int lsum=MaxSubeqSum3(a,left,middle);</span><br><span class="line">	int rsum=MaxSubeqSum3(a,middle+1,right);//递归寻找两边子序列最大和</span><br><span class="line"></span><br><span class="line">		/* 再分别找左右跨界最大子列和*/</span><br><span class="line">	int leftmaxsum = 0;</span><br><span class="line">	int leftthissum = 0;</span><br><span class="line">	for(int i=middle;i&gt;=left;i--)&#123;  //应该从边界出发向左边找</span><br><span class="line">		leftthissum += a[i];</span><br><span class="line">		if(leftmaxsum &lt; leftthissum)</span><br><span class="line">			leftmaxsum = leftthissum;	</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	int rightmaxsum = 0;</span><br><span class="line">	int rightthissum = 0;</span><br><span class="line">	for(int i=middle+1;i&lt;=right;i++)&#123;  // 从边界出发向右边找</span><br><span class="line">		rightmaxsum += a[i];</span><br><span class="line">		if(rightmaxsum &lt; rightthissum)</span><br><span class="line">			rightmaxsum = rightthissum;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	return max(leftmaxsum+rightmaxsum,max(lsum,rsum));</span><br><span class="line"></span><br><span class="line">&#125;//分治递归</span><br></pre></td></tr></table></figure>
+
+<p>算法四：贪心算法，时间复杂度O(n),每次只计算出正序列和，最后总和最大</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">int MaxSubeqSum4(int a[],int n)</span><br><span class="line">&#123;</span><br><span class="line">	int thissum=0,maxsum=0;</span><br><span class="line">	for(int i=0;i&lt;n;i++)</span><br><span class="line">	&#123;</span><br><span class="line">			thissum+=a[i];</span><br><span class="line">			if(thissum&gt;maxsum)</span><br><span class="line">				maxsum=thissum;</span><br><span class="line">			else if(thissum&lt;0)</span><br><span class="line">				thissum=0;</span><br><span class="line">	&#125;</span><br><span class="line">	return maxsum;</span><br><span class="line">&#125;//贪心算法</span><br></pre></td></tr></table></figure>
+
+<p>主函数测试代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">int main(void)</span><br><span class="line">&#123;</span><br><span class="line">	int n = 0;</span><br><span class="line">	scanf(&quot;%d&quot;,&amp;n);</span><br><span class="line">	int *number=(int*)malloc(sizeof(n));</span><br><span class="line">	if(!number)</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;内存分配失败\n&quot;);</span><br><span class="line">		return NULL;</span><br><span class="line">	&#125;</span><br><span class="line">	for(int i =0;i&lt;n;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		scanf(&quot;%d&quot;,&amp;number[i]);</span><br><span class="line">	&#125;</span><br><span class="line">	printf(&quot;maxsum:%d\n&quot;,MaxSubeqSum3(number,0,n-1));</span><br><span class="line">	free(number);</span><br><span class="line">	number=NULL;</span><br><span class="line">	getchar();</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/15/字符串函数构析/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -568,7 +664,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
