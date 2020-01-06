@@ -190,6 +190,238 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/06/汉诺塔问题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2020/01/06/汉诺塔问题/" class="post-title-link" itemprop="url">汉诺塔问题</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2020-01-06 11:05:52 / Modified: 11:06:05" itemprop="dateCreated datePublished" datetime="2020-01-06T11:05:52+08:00">2020-01-06</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <p>汉诺塔hanoi问题</p>
+<ul>
+<li><p>问题描述</p>
+<ul>
+<li>假设有三个柱子A.B.C，N个盘子</li>
+<li>每次只允许移动一个盘子</li>
+<li>必须保证小盘子在大盘子之上</li>
+<li>如何把所有盘子从A移到C?</li>
+</ul>
+</li>
+<li><p>理解过程（转化为递归问题）</p>
+<ul>
+<li>用C柱做过渡，将A柱上的n-1的盘子移到B上</li>
+<li>从A柱上最下面的盘子直接移到C柱上</li>
+<li>用A柱做过渡，将B柱上的n-1个盘子移到C上</li>
+</ul>
+</li>
+<li><p>算法实现</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">#include &quot;iostream&quot;</span><br><span class="line"></span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">void move(int x,char a,char b)</span><br><span class="line">&#123;</span><br><span class="line">	cout&lt;&lt;x&lt;&lt;&quot;从&quot;&lt;&lt;a&lt;&lt;&quot;移到&quot;&lt;&lt;b&lt;&lt;&quot;\n&quot;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void hanoi(int  n,char x,char y,char z)</span><br><span class="line">&#123;</span><br><span class="line">	if(n==1) move(n,x,z);</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		hanoi(n-1,x,z,y);</span><br><span class="line">		move(n,x,z);</span><br><span class="line">		hanoi(n-1,y,x,z);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int  main(void)</span><br><span class="line">&#123;</span><br><span class="line">	int n;</span><br><span class="line">	cin&gt;&gt;n;</span><br><span class="line">	hanoi(n,&apos;A&apos;,&apos;B&apos;,&apos;C&apos;);</span><br><span class="line"></span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/26/数据结构-绪论/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/12/26/数据结构-绪论/" class="post-title-link" itemprop="url">post数据结构-绪论</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2019-12-26 20:28:32 / Modified: 20:33:23" itemprop="dateCreated datePublished" datetime="2019-12-26T20:28:32+08:00">2019-12-26</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <ul>
+<li>课程内容<ul>
+<li>线性表</li>
+<li>栈和队列</li>
+<li>串和数组</li>
+<li>树和二叉树</li>
+<li>优先队列和堆</li>
+<li>图</li>
+<li>查找</li>
+<li>排序</li>
+</ul>
+</li>
+<li>逻辑结构和物理结构<ul>
+<li>逻辑结构：从抽象/高层角度来描述数据的特征和操作的抽象含义<ul>
+<li>数据元素直接的关系<ul>
+<li>集合</li>
+<li>线性表：一对一</li>
+<li>树：一对多</li>
+<li>图：多对多</li>
+</ul>
+</li>
+<li>对数据有那些操作<ul>
+<li>插入</li>
+<li>删除</li>
+<li>读取</li>
+<li>修改</li>
+<li>查询</li>
+</ul>
+</li>
+<li>抽象数据类型：从抽象角度描述的数据结构（ADT）</li>
+</ul>
+</li>
+<li>物理结构：数据及其操作在计算机内部的表示和实现</li>
+</ul>
+</li>
+<li>存储结构<ul>
+<li>顺序存储：地址相邻</li>
+<li>非顺序存储：地址不相邻</li>
+</ul>
+</li>
+<li>算法的基本要求<ul>
+<li>正确性：算法应能满足具体问题的需求</li>
+<li>可读性：算法应易于阅读和理解</li>
+<li>健壮性：输入数据非法时，算法也能适当作出反应或进行处理</li>
+<li>高效性：算法执行时间少，占用存储空间少</li>
+</ul>
+</li>
+<li>问题<ul>
+<li>矩阵的算法复杂度</li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/26/Maximum-Subsquence-Sum/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -664,7 +896,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -699,7 +931,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
